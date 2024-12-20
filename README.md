@@ -26,16 +26,31 @@ By connecting these two nodes through the `METADATA` output/input, you can impor
 - **Advanced Compatibility**: Metadata is correctly embedded in the final PNG file.
 
 ## Installation
-1. **Download or Clone the Project**  
-   Clone the repository from GitHub:  
+
+### Method 1: Install via ComfyUI Manager
+1. Open **ComfyUI**.
+2. Go to the **Custom Nodes** section in the interface.
+3. Search for **"Image Metadata Nodes"** and install it directly from the ComfyUI Manager.
+4. **Restart ComfyUI**  
+   Restart ComfyUI to load the nodes.
+
+### Method 2: Clone the Repository
+1. Open a terminal or command prompt.
+2. Run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes.git
+3. **Restart ComfyUI**  
+   Once the files are in place, restart ComfyUI to load the nodes.
+   
+### Manual Installation
+1. **Download or Clone the Project**    
    [https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes)
 
 2. **Move the Folder to Your ComfyUI Directory**  
    Copy the folder `ComfyUI_Image_Metadata` into the `custom_nodes` directory of your ComfyUI installation.
 
-
 3. **Restart ComfyUI**  
-Once the files are in place, restart ComfyUI to load the nodes.
+   Once the files are in place, restart ComfyUI to load the nodes.
 
 ## Usage
 
