@@ -57,6 +57,8 @@ Once the files are in place, restart ComfyUI to load the nodes.
 2. Modify the image (e.g., with an upscaling or retouching node).  
 3. Connect the `METADATA` output of the loader to the `METADATA` input of the saver.  
 4. Use **Image Metadata Saver** to save the image with intact metadata.
+   
+![Workflow Example](assets/exemple workflow.png)
 
 ## License
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute it, provided you include a copyright notice.
