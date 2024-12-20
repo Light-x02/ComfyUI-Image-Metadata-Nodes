@@ -3,6 +3,10 @@
 **Version**: 1.0.0  
 **Author**: [Light-x02](https://github.com/Light-x02)
 
+## Support My Work
+If you find this project useful, you can support my work on Ko-fi:  
+[https://ko-fi.com/light_x02](https://ko-fi.com/light_x02)
+
 ## Description
 This project provides two complementary nodes for **ComfyUI**, allowing you to load and save images while preserving their metadata intact. These nodes are particularly useful for workflows that require image adjustments, such as **upscaling**, without altering the original metadata.
 
@@ -65,8 +69,4 @@ This project is licensed under the **MIT License**. You are free to use, modify,
 
 ## Contribution
 Contributions are welcome! If you want to report a bug or suggest an improvement, open an issue or submit a pull request on the [GitHub repository](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes).
-
-## Support My Work
-If you find this project useful, you can support my work on Ko-fi:  
-[https://ko-fi.com/light_x02](https://ko-fi.com/light_x02)
 
