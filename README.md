@@ -1,70 +1,70 @@
-COMFYUI IMAGE METADATA NODES
+# ComfyUI Image Metadata Nodes
 
-VERSION: 1.0.0
-AUTHOR: Light-x02
+**Version**: 1.0.0  
+**Author**: [Light-x02](https://github.com/Light-x02)
 
-DESCRIPTION
-This project provides two complementary nodes for ComfyUI, allowing you to load and save images while preserving their metadata intact. These nodes are particularly useful for workflows that require image adjustments, such as upscaling, without altering the original metadata.
+## Description
+This project provides two complementary nodes for **ComfyUI**, allowing you to load and save images while preserving their metadata intact. These nodes are particularly useful for workflows that require image adjustments, such as **upscaling**, without altering the original metadata.
 
-HOW IT WORKS
-Metadata Loading:  
-The Image Metadata Loader node imports an image while extracting its original metadata, which can then be passed to other nodes.
+## How It Works
 
-Metadata Saving:  
-The Image Metadata Saver node saves an image with its original, unchanged metadata embedded directly in the generated PNG file.
+### Metadata Loading
+The **Image Metadata Loader** node imports an image while extracting its original metadata, which can then be passed to other nodes.
 
-By connecting these two nodes through the METADATA output/input, you can import a previously generated image with correct metadata, modify it (e.g., using upscaling), and save it while preserving the metadata intact.
+### Metadata Saving
+The **Image Metadata Saver** node saves an image with its original, unchanged metadata embedded directly in the generated PNG file.
 
-FEATURES
-- Supported Formats: Load and save in PNG format (metadata is directly embedded in the file).
-- Dynamic Metadata Management: Preserves original metadata, even in complex workflows.
-- Advanced Compatibility: Metadata is correctly embedded in the final PNG file.
+By connecting these two nodes through the `METADATA` output/input, you can import a previously generated image with correct metadata, modify it (e.g., using upscaling), and save it while preserving the metadata intact.
 
-INSTALLATION
-1. Download or Clone the Project:
-   Clone the repository from GitHub: https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes
+## Features
+- **Supported Formats**: Load and save in PNG format (metadata is directly embedded in the file).  
+- **Dynamic Metadata Management**: Preserves original metadata, even in complex workflows.  
+- **Advanced Compatibility**: Metadata is correctly embedded in the final PNG file.
 
-2. Move the Folder to Your ComfyUI Directory:
-   Copy the folder ComfyUI_Image_Metadata into the custom_nodes directory of your ComfyUI installation.
+## Installation
+1. **Download or Clone the Project**  
+   Clone the repository from GitHub:  
+   [https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes)
 
-3. Final Structure:
-   Ensure the directory structure looks like this:
-   ComfyUI/custom_nodes/ComfyUI_Image_Metadata/
+2. **Move the Folder to Your ComfyUI Directory**  
+   Copy the folder `ComfyUI_Image_Metadata` into the `custom_nodes` directory of your ComfyUI installation.
 
-4. Restart ComfyUI:
-   Once the files are in place, restart ComfyUI to load the nodes.
 
-USAGE
+3. **Restart ComfyUI**  
+Once the files are in place, restart ComfyUI to load the nodes.
 
-INCLUDED NODES
+## Usage
 
-Image Metadata Loader:  
-Loads an image and extracts its metadata.  
-Outputs:
-- IMAGE: The loaded image.
-- METADATA: The raw metadata.
+### Included Nodes
 
-Image Metadata Saver:  
-Saves an image with unchanged metadata.  
-Inputs:
-- IMAGE: The image to save.
-- METADATA: The metadata to include.  
-Options:
-- Filename Prefix: Prefix for the file name (e.g., %date:yyyy-MM-dd%).
-- Subdirectory Name: Name of the subdirectory for saving files.
+#### Image Metadata Loader
+- **Description**: Loads an image and extracts its metadata.  
+- **Outputs**:  
+- `IMAGE`: The loaded image.  
+- `METADATA`: The raw metadata.
 
-EXAMPLE WORKFLOW
-1. Use the Image Metadata Loader node to load an image and retrieve its metadata.
-2. Modify the image (e.g., with an upscaling or retouching node).
-3. Connect the METADATA output of the loader to the METADATA input of the saver.
-4. Use Image Metadata Saver to save the image with intact metadata.
+#### Image Metadata Saver
+- **Description**: Saves an image with unchanged metadata.  
+- **Inputs**:  
+- `IMAGE`: The image to save.  
+- `METADATA`: The metadata to include.  
+- **Options**:  
+- **Filename Prefix**: Prefix for the file name (e.g., `%date:yyyy-MM-dd%`).  
+- **Subdirectory Name**: Name of the subdirectory for saving files.
 
-LICENSE
-This project is licensed under the MIT License. You are free to use, modify, and distribute it, provided you include a copyright notice.
+### Example Workflow
+1. Use the **Image Metadata Loader** node to load an image and retrieve its metadata.  
+2. Modify the image (e.g., with an upscaling or retouching node).  
+3. Connect the `METADATA` output of the loader to the `METADATA` input of the saver.  
+4. Use **Image Metadata Saver** to save the image with intact metadata.
 
-CONTRIBUTION
-Contributions are welcome! If you want to report a bug or suggest an improvement, open an issue or submit a pull request on the GitHub repository: https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes  
+## License
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute it, provided you include a copyright notice.
 
-SUPPORT MY WORK
+## Contribution
+Contributions are welcome! If you want to report a bug or suggest an improvement, open an issue or submit a pull request on the [GitHub repository](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes).
+
+## Support My Work
 If you find this project useful, you can support my work on Ko-fi:  
-https://ko-fi.com/light_x02
+[https://ko-fi.com/light_x02](https://ko-fi.com/light_x02)
+
