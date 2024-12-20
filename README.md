@@ -64,6 +64,11 @@ Once the files are in place, restart ComfyUI to load the nodes.
    
 ![Workflow Example](assets/exemple_workflow.png)
 
+## Additional Notes
+
+To save metadata in my PNG files when generating images with txt2img workflows, I use the extension **"ComfyUI-ImageMetadataExtension"**, which is available [here](https://github.com/edelvarden/ComfyUI-ImageMetadataExtension). This ensures that platforms like Civitai automatically detect the metadata.
+
+
 ## License
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute it, provided you include a copyright notice.
 
