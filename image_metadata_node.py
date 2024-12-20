@@ -121,7 +121,7 @@ class ImageMetadataSaver(ComfyNodeABC):
             filename_with_batch_num = filename.replace("%batch_num%", str(batch_number))
             file = f"{filename_with_batch_num}_{counter:05}_.png"
 
-            img.save(os.path.join(full_output_folder, file), pnginfo=pnginfo, compress_level=0)
+            img.save(os.path.join(full_output_folder, file), pnginfo=pnginfo, compress_level=self.compress_level)
             results.append({
                 "filename": file,
                 "subfolder": os.path.join(subfolder, subdirectory_name) if subdirectory_name else subfolder,
