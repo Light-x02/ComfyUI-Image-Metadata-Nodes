@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-image-metadata-nodes"
+description = "Nodes for loading and saving images with metadata in ComfyUI."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["Pillow>=9.0.0", "numpy>=1.21.0", "torch>=1.10.0"]
+
+[project.urls]
+Repository = "https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Image-Metadata-Nodes"
+Icon = ""
