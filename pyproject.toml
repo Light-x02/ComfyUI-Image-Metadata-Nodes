@@ -10,6 +10,6 @@ Repository = "https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "lightx02"
 DisplayName = "ComfyUI-Image-Metadata-Nodes"
 Icon = ""
