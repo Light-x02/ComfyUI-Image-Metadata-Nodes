@@ -83,10 +83,6 @@ By connecting these two nodes through the `METADATA` output/input, you can impor
 
 To save metadata in my PNG files when generating images with txt2img workflows, I use the extension **"ComfyUI-ImageMetadataExtension"**, which is available [here](https://github.com/edelvarden/ComfyUI-ImageMetadataExtension). This ensures that platforms like Civitai automatically detect the metadata.
 
-
-## License
-This project is licensed under the **MIT License**. You are free to use, modify, and distribute it, provided you include a copyright notice.
-
 ## Contribution
 Contributions are welcome! If you want to report a bug or suggest an improvement, open an issue or submit a pull request on the [GitHub repository](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes).
 
