@@ -13,7 +13,7 @@ This project provides two complementary nodes for **ComfyUI**, allowing you to l
 ## How It Works
 
 ### Metadata Loading
-The **Image Metadata Loader** node imports an image while extracting its original metadata, which can then be passed to other nodes.
+The **Image Metadata Loader** node imports an image while extracting its original metadata. It also provides an optional `MASK` output.
 
 ### Metadata Saving
 The **Image Metadata Saver** node saves an image with its original, unchanged metadata embedded directly in the generated PNG file.
@@ -21,9 +21,31 @@ The **Image Metadata Saver** node saves an image with its original, unchanged me
 By connecting these two nodes through the `METADATA` output/input, you can import a previously generated image with correct metadata, modify it (e.g., using upscaling), and save it while preserving the metadata intact.
 
 ## Features
-- **Supported Formats**: Load and save in PNG format (metadata is directly embedded in the file).  
+- **Supported Formats**: PNG (metadata is directly embedded in the file).  
+- **Optional Mask Output**: Exposes a `MASK` output from the loader node.  
 - **Dynamic Metadata Management**: Preserves original metadata, even in complex workflows.  
-- **Advanced Compatibility**: Metadata is correctly embedded in the final PNG file.
+- **Advanced Compatibility**: Metadata is correctly embedded in the final PNG file.  
+- **Dynamic Pathing**: Use dynamic time/date placeholders to auto-name your outputs.
+
+## Supported Prefixes
+
+You can use the following placeholders in `filename_prefix` and `subdirectory_name`:
+
+| Placeholder         | Description              | Scope                |
+|---------------------|--------------------------|-----------------------|
+| `%date:yyyy%`       | Year (e.g. 2025)         | ✅ Filename / Subdir  |
+| `%date:yy%`         | Year short (e.g. 25)     | ✅ Filename / Subdir  |
+| `%date:MM%`         | Month (01–12)            | ✅ Filename / Subdir  |
+| `%date:dd%`         | Day (01–31)              | ✅ Filename / Subdir  |
+| `%date:yyyy-MM%`    | Year-Month               | ✅ Filename / Subdir  |
+| `%date:yyyy-MM-dd%` | Full Date                | ✅ Filename / Subdir  |
+| `%time:HH%`         | Hour (24h)               | ✅ Filename / Subdir  |
+| `%time:mm%`         | Minute                   | ✅ Filename / Subdir  |
+| `%time:ss%`         | Second                   | ✅ Filename / Subdir  |
+| `%time:HH-mm-ss%`   | Full Time                | ✅ Filename / Subdir  |
+| `%datetime:full%`   | Full datetime            | ✅ Filename only ⚠️   |
+
+⚠️ `%datetime:full%` is **not allowed** in `subdirectory_name` to prevent creating deeply nested folder structures. If used, it will trigger an error.
 
 ## Installation
 
@@ -39,9 +61,10 @@ By connecting these two nodes through the `METADATA` output/input, you can impor
 2. Run the following command to clone the repository:
    ```bash
    git clone https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes.git
+   ```
 3. **Restart ComfyUI**  
    Once the files are in place, restart ComfyUI to load the nodes.
-   
+
 ### Manual Installation
 1. **Download or Clone the Project**    
    [https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes](https://github.com/Light-x02/ComfyUI-Image-Metadata-Nodes)
@@ -59,17 +82,18 @@ By connecting these two nodes through the `METADATA` output/input, you can impor
 #### Image Metadata Loader
 - **Description**: Loads an image and extracts its metadata.  
 - **Outputs**:  
-- `IMAGE`: The loaded image.  
-- `METADATA`: The raw metadata.
+  - `IMAGE`: The loaded image.  
+  - `METADATA`: The raw metadata.  
+  - `MASK`: Optional mask output.
 
 #### Image Metadata Saver
 - **Description**: Saves an image with unchanged metadata.  
 - **Inputs**:  
-- `IMAGE`: The image to save.  
-- `METADATA`: The metadata to include.  
+  - `IMAGE`: The image to save.  
+  - `METADATA`: The metadata to include (optional).  
 - **Options**:  
-- **Filename Prefix**: Prefix for the file name (e.g., `%date:yyyy-MM-dd%`).  
-- **Subdirectory Name**: Name of the subdirectory for saving files.
+  - **Filename Prefix**: Prefix for the file name (e.g., `%date:yyyy-MM-dd%`).  
+  - **Subdirectory Name**: Folder to save into (can be dynamically generated).
 
 ### Example Workflow
 1. Use the **Image Metadata Loader** node to load an image and retrieve its metadata.  
